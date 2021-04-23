@@ -1,0 +1,19 @@
+{
+  "welcomeFile": "/flpSandbox.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/backend/(.*)",
+      "target": "$1",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false,
+      "destination": "backend"
+    },
+    {
+      "source": "^(.*)",
+      "target": "$1",
+      "authenticationType": "xsuaa",
+      "service": "html5-apps-repo-rt"
+    }
+  ]
+}
